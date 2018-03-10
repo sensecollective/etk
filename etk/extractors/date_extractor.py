@@ -14,7 +14,7 @@ class DateParser(object):
         self.ignore_future_dates = ignore_future_dates
         self.ignore_past_years = ignore_past_years
 
-    def parse_date(self, str_date: str, settings: dict=None) -> datetime.datetime or None:
+    def parse_date(self, str_date: str, settings=None) -> datetime.datetime or None:
         """
 
         Args:
@@ -36,6 +36,10 @@ class DateParser(object):
         Returns: a datetime.datetime object (or None if the string is not a date)
 
         """
+        if settings is None:
+            settings = {'STRICT_PARSING': True}
+
+        # TODO: what is the point of the next statement?
         customized_settings = settings if settings else {'STRICT_PARSING': True}
         try:
             if len(str_date) > 100:
