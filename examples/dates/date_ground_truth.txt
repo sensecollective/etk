@@ -103,7 +103,7 @@ lunes, 4 de julio de 2016, 9:01
 # backpage4_regex_day = r"(\d\d?)\.\s+(" +  months_long_regex + r")\s+(\d\d\d\d)"
 torsdag, 7. juli 2016, 12:01
 
-
+# Need to create ground truth examples for the following entries:
 # dd/mm/yy	03/08/06
 
 # dd/mm/yyyy	03/08/2006

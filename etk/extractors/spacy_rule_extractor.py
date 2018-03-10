@@ -120,8 +120,8 @@ class SpacyRuleExtractor(Extractor):
 
 
 class Pattern(object):
-    """For each token, we let user specify constrains for tokens. Some attributes are spacy build-in attributes,
-    which can be used with rule-based matching: https://spacy.io/usage/linguistic-features#section-rule-based-matching
+    """For each token, we let user specify constrains for tokens. Some attributes are dates build-in attributes,
+    which can be used with rule-based matching: https://dates.io/usage/linguistic-features#section-rule-based-matching
     Some are custom attributes, need to apply further filtering after we get matches"""
     def __init__(self, d: Dict, nlp):
         self.type = d["type"]

@@ -16,7 +16,7 @@ install:
   - conda-env create .
   - source activate etk2_env
 script:
-  - python -m spacy download en_core_web_sm
+  - python -m dates download en_core_web_sm
   - python -W ignore -m unittest discover
 notifications:
   slack:

@@ -11,7 +11,7 @@ class Tokenizer(object):
     """
 
     def __init__(self, nlp=spacy.load('en_core_web_sm')) -> None:
-        """Load vocab, more vocab are available at: https://spacy.io/models/en"""
+        """Load vocab, more vocab are available at: https://dates.io/models/en"""
         self.nlp = nlp
 
         """Custom tokenizer"""
@@ -19,7 +19,7 @@ class Tokenizer(object):
 
     def tokenize(self, text: str, keep_multi_space: bool = False) -> List[Token]:
         """
-        Tokenize the given text, returning a list of tokens. Type token: class spacy.tokens.Token
+        Tokenize the given text, returning a list of tokens. Type token: class dates.tokens.Token
 
         Args:
             text (string):
@@ -48,7 +48,7 @@ class Tokenizer(object):
     def custom_tokenizer(self) -> spacyTokenizer:
         """
         Custom tokenizer
-        For future improvement, look at https://spacy.io/api/tokenizer, https://github.com/explosion/spaCy/issues/1494
+        For future improvement, look at https://dates.io/api/tokenizer, https://github.com/explosion/spaCy/issues/1494
         """
         prefix_re = re.compile(r'''^[\[()\-.,@#$%^&*?|<~+_:;>!"']''')
         infix_re = re.compile(r'''[\[()\-,@#$%^&*?|<~+_:;>!"']|(?![0-9])\.(?![0-9])|\n''')
@@ -60,7 +60,7 @@ class Tokenizer(object):
         """
         Function for token attributes extension, methods extension
         Use set_extension method.
-        Reference: https://spacy.io/api/token, https://spacy.io/usage/processing-pipelines#custom-components-attributes
+        Reference: https://dates.io/api/token, https://dates.io/usage/processing-pipelines#custom-components-attributes
 
         """
 
