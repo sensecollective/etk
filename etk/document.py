@@ -30,6 +30,26 @@ class Document(Extractable):
         self._value = cdr_document
         self.default_tokenizer = etk.default_tokenizer
 
+    @property
+    def doc_id(self):
+        """
+        Returns: the doc_id of the CDR document
+
+        """
+        return self._value.get("doc_id")
+
+    @doc_id.setter
+    def doc_id(self, new_doc_id):
+        """
+
+        Args:
+            new_doc_id ():
+
+        Returns:
+
+        """
+        self._value["doc_id"] = new_doc_id
+
     def select_segments(self, jsonpath: str) -> List[Segment]:
         """
         Dereferences the json_path inside the document and returns the selected elements.
